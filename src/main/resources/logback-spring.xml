@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d %5p %t [%c] %X{requestId} - %m%n</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="consoleAppender"/>
+    </root>
+    <logger name="com.sidecarhealth" level="DEBUG" additivity="false">
+        <appender-ref ref="consoleAppender"/>
+    </logger>
+</configuration>
